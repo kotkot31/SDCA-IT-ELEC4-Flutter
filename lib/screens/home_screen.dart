@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
 
 void main() {
   runApp(App());
 }
 
-class App extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Scaffold homepage = Scaffold(
+      appBar: AppBar(title: Text('Homepage')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+        },
+        child: const Icon(Icons.add)
+      ),
+    );
+
     return MaterialApp(
-      home: HomeScreen(),
+      home: homepage,
       theme: ThemeData(
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.red,
